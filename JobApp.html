@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Job Application </title>
+    </head>
+    <body>
+        <div id="form">
+            <form action="index.php" method="POST">
+                <label for="name"> Name </label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email"> Email </label>
+                <input type="email" id="email" name="email" pattern="/^[a-zA-Z0-9. _%+-]+@[a-zA-Z0-9. -]+\\. [a-zA-Z]{2,}$/" required>
+                <br>
+                <label for="phone"> Phone #</label>
+                <input type="phone" id="phone" name="phone" pattern="^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$" required>
+                <br>
+                <label for="address"> Address </label>
+                <input list="house" id="address" name="address">
+                <datalist id="house">
+                    <option value="2604 Fireside Lane"> Address 1 </option>
+                    <option value="Bafal, Kathmandu"> Address 2 </option>
+                    <option value="Irving, Texas"> Address 3 </option>
+                </datalist>
+                <br>
+                <label for="fields"> What fields are you interested in? </label>
+                <br>
+                <label for="Software Engineering"> Software Engineering </label>
+                <input type="checkbox" id="Software Engineering" name="fields" value="Software Engineering">
+                <label for="Cybersecurity"> Cybersecurity </label>
+                <input type="checkbox" id="Cybersecurity" name="fields" value="Cybersecurity">
+                <label for="Web"> Web Developer </label>
+                <input type="checkbox" id="Web" name="fields" value="Web Developer">
+                <label for="App"> App Developer </label>
+                <input type="checkbox" id="App" name="fields" value="App Developer">
+                <br>
+                <label for="Degree"> Do you have a Bachelor's degree in Computer Science? </label>
+                <label for="Yes"> Yes </label>
+                <input type="radio" id="Yes" name="Degree" value="Yes">
+                <label for="No"> No </label>
+                <input type="radio" id="No" name="Degree" value="No">
+                <br>
+                <label for="addInfo "> Additional Info: </label>
+                <textarea id="addInfo" name="addInfo" rows="3" columns="8" maxlength="200"></textarea>
+                <br>
+                <label for="upload"> Upload media: </label>
+                <input type="file" type=".pdf">
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </div>
+    </body>
+</html>
